@@ -4,10 +4,13 @@ defmodule Transformable.MixProject do
   def project do
     [
       app: :transformable,
+      name: "Transformable",
+      description: "Helpers for transforming arbitrary data into structs",
       version: "0.1.0",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -19,10 +22,12 @@ defmodule Transformable.MixProject do
   end
 
   # Run "mix help deps" to learn about dependencies.
-  defp deps do
+  defp deps, do: []
+
+  defp package do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/bceskavich/transformable"}
     ]
   end
 end
