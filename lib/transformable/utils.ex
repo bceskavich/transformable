@@ -1,4 +1,6 @@
 defmodule Transformable.Utils do
+  @moduledoc false
+
   def transform(data, %{__struct__: mod}), do: do_transform(data, mod)
   def transform(data, mod) when is_atom(mod), do: do_transform(data, mod)
 
